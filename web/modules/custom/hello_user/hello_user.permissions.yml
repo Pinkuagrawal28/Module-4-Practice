@@ -1,0 +1,3 @@
+access hello user page:
+  title: 'Access Hello User page'
+  description: 'Allow users to access the custom hello user page.'

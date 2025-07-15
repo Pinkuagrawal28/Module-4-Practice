@@ -1,0 +1,7 @@
+hello_user.hello:
+  path: '/hello-user'
+  defaults:
+    _controller: '\Drupal\hello_user\Controller\HelloUserController::hello'
+    _title: 'Hello User Page'
+  requirements:
+    _permission: 'access hello user page'

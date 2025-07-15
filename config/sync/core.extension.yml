@@ -1,6 +1,7 @@
 _core:
   default_config_hash: 4GIX5Esnc_umpXUBj4IIocRX7Mt5fPhm4AgXfE3E56E
 module:
+  anime_fetch: 0
   announcements_feed: 0
   automated_cron: 0
   big_pipe: 0
@@ -24,22 +25,28 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  hello_user: 0
   help: 0
   history: 0
   image: 0
+  jsonapi: 0
   link: 0
   media: 0
   media_library: 0
   menu_link_content: 0
   menu_ui: 0
   mysql: 0
+  neo_form: 0
   node: 0
   options: 0
   page_cache: 0
   paragraphs_type_permissions: 0
   path: 0
   path_alias: 0
+  rest: 0
+  say_hello: 0
   search: 0
+  serialization: 0
   shortcut: 0
   system: 0
   taxonomy: 0
@@ -48,6 +55,7 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  welcome_di: 0
   views: 10
   paragraphs: 11
   standard: 1000

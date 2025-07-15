@@ -1,0 +1,5 @@
+name: 'Routing Mod'
+type: module
+description: 'Demonstrates route access control, permissions, and dynamic parameters.'
+core_version_requirement: ^10 || ^11
+package: Custom

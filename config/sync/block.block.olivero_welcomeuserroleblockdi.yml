@@ -1,0 +1,25 @@
+uuid: 71c6acc5-5db2-4a3c-ace0-eaaa3e895eb4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - welcome_di
+  theme:
+    - olivero
+id: olivero_welcomeuserroleblockdi
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: welcome_user_role_block_di
+settings:
+  id: welcome_user_role_block_di
+  label: 'Welcome User Role Block DI'
+  label_display: visible
+  provider: welcome_di
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /custom-welcome-page-di

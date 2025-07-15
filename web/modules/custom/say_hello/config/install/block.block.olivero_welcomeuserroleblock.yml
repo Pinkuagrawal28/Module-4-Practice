@@ -1,0 +1,25 @@
+uuid: 8b2a5afc-628a-45b6-9c26-4364874b09dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - say_hello
+    - system
+  theme:
+    - olivero
+id: olivero_welcomeuserroleblock
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: welcome_user_role_block
+settings:
+  id: welcome_user_role_block
+  label: 'Welcome User Role Block'
+  label_display: '0'
+  provider: say_hello
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /custom-welcome-page

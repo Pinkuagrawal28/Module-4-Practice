@@ -1,0 +1,4 @@
+name: tasks4
+recipe: drupal11
+config:
+  webroot: web

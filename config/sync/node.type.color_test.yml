@@ -1,0 +1,18 @@
+uuid: 40ec6364-25cb-408a-82ba-d246723b2ac7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Color Test'
+type: color_test
+description: null
+help: null
+new_revision: true
+preview_mode: 0
+display_submitted: true

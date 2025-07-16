@@ -1,0 +1,25 @@
+uuid: f482d30f-d5ea-41ac-a5d5-621514e1fd2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_choose_color
+    - node.type.color_test
+  module:
+    - rgb_field
+id: node.color_test.field_choose_color
+field_name: field_choose_color
+entity_type: node
+bundle: color_test
+label: 'Choose Color'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    r: '0'
+    g: '0'
+    b: '0'
+default_value_callback: ''
+settings: {  }
+field_type: rgb_color

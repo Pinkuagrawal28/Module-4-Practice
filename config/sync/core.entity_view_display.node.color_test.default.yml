@@ -1,0 +1,28 @@
+uuid: b36b3a5e-e7bc-43e0-bbbd-161733a13584
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.color_test.field_choose_color
+    - node.type.color_test
+  module:
+    - rgb_field
+    - user
+id: node.color_test.default
+targetEntityType: node
+bundle: color_test
+mode: default
+content:
+  field_choose_color:
+    type: color_code_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

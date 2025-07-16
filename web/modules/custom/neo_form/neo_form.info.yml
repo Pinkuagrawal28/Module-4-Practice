@@ -1,0 +1,5 @@
+name: 'Neo Form'
+type: module
+description: 'A config form with field validations.'
+core_version_requirement: ^10 || ^11
+package: Custom

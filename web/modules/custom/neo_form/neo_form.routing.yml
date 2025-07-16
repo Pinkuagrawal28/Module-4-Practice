@@ -1,0 +1,7 @@
+neo_form.config_form:
+  path: '/admin/config/neo-form'
+  defaults:
+    _form: '\Drupal\neo_form\Form\UserInfoConfigForm'
+    _title: 'Neo Form Configuration'
+  requirements:
+    _permission: 'administer site configuration'

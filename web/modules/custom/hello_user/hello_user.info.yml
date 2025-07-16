@@ -1,0 +1,5 @@
+name: 'Hello User'
+type: module
+description: 'Displays a custom page with a hello message to the user.'
+core_version_requirement: ^10 || ^11
+package: Custom

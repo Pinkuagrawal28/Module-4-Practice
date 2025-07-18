@@ -1,0 +1,12 @@
+name: RGB Field
+type: module
+description: 'An example module for getting RGB Fields.'
+package: RGB Field
+dependencies:
+  - drupal:field
+  - drupal:field_ui
+  # - drupal:color
+  - drupal:views
+  - drupal:entity_reference_revisions
+  - drupal:media
+core_version_requirement: ^10.3 || ^11.0

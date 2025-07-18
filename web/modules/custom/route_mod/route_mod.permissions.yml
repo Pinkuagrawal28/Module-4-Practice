@@ -1,0 +1,3 @@
+access the custom page:
+  title: 'Access the custom page'
+  description: 'Allow users to access the /custom-access-page route'

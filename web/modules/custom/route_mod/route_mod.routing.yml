@@ -1,0 +1,16 @@
+route_mod.custom_page:
+  path: '/custom-access-page'
+  defaults:
+    _controller: '\Drupal\route_mod\Controller\CampaignController::customPage'
+    _title: 'Custom Access Page'
+  requirements:
+    _custom_access: '\Drupal\route_mod\Access\CustomPageAccessCheck::access'
+
+route_mod.campaign_value:
+  path: '/campaign/value/{number}'
+  defaults:
+    _controller: '\Drupal\route_mod\Controller\CampaignController::campaignValue'
+    _title: 'Campaign Value Page'
+  requirements:
+    _permission: 'access content'
+    number: \d+

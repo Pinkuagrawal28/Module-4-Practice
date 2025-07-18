@@ -45,8 +45,6 @@ module:
   path_alias: 0
   rest: 0
   rgb_field: 0
-  route_mod: 0
-  say_hello: 0
   search: 0
   serialization: 0
   shortcut: 0
@@ -57,7 +55,6 @@ module:
   update: 0
   user: 0
   views_ui: 0
-  welcome_di: 0
   views: 10
   paragraphs: 11
   standard: 1000

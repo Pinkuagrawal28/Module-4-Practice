@@ -1,0 +1,7 @@
+say_hello.welcome_page:
+  path: '/custom-welcome-page'
+  defaults:
+    _title: 'Welcome Page'
+    _controller: '\Drupal\say_hello\Controller\WelcomePageController::content'
+  requirements:
+    _permission: 'access content'

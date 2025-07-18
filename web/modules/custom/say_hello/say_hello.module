@@ -1,0 +1,12 @@
+<?php
+
+use Symfony\Component\HttpKernel\Event\RedirectResponseEvent;
+
+/**
+ * Implements hook_user_login().
+ */
+function say_hello_user_login($account) {
+  $response = new \Symfony\Component\HttpFoundation\RedirectResponse('/custom-welcome-page');
+  $response->send();
+  exit;
+}

@@ -44,7 +44,6 @@ module:
   path: 0
   path_alias: 0
   rest: 0
-  say_hello: 0
   search: 0
   serialization: 0
   shortcut: 0

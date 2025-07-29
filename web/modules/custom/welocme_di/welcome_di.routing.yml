@@ -1,0 +1,7 @@
+welcome_di.welcome_page:
+  path: '/custom-welcome-page-di'
+  defaults:
+    _title: 'Welcome Page'
+    _controller: '\Drupal\welcome_di\Controller\WelcomePageController::content'
+  requirements:
+    _permission: 'access content'

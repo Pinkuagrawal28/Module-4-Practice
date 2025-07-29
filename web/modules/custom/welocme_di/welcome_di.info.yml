@@ -1,0 +1,5 @@
+name: 'Welcome Di'
+type: module
+description: 'Displays welcome block for logged-in users with their role.'
+core_version_requirement: ^10 || ^11
+package: Custom

@@ -1,0 +1,9 @@
+name: Movie Budget
+type: module
+description: This is a custom config form for movies.
+core_version_requirement: ^10 || ^11
+package: custom
+dependencies:
+  - drupal:config
+  - drupal:field
+  - drupal:node

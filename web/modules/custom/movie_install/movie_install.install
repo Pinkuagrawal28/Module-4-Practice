@@ -1,0 +1,103 @@
+<?php
+
+use Drupal\node\Entity\NodeType;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\Core\Entity\Entity\EntityFormDisplay;
+use Drupal\Core\Entity\Entity\EntityViewDisplay;
+
+/**
+ * Implements hook_install().
+ */
+function movie_install() {
+  // Create the 'movie' content type.
+  if (!NodeType::load('movie')) {
+    $type = NodeType::create([
+      'type' => 'movie',
+      'name' => 'Movie',
+      'description' => 'A custom content type for Movies.',
+    ]);
+    $type->save();
+  }
+
+  // Enable and attach the Body field (default).
+  node_add_body_field(NodeType::load('movie'));
+
+  // Create Movie Price field (decimal).
+  if (!FieldStorageConfig::loadByName('node', 'field_movie_price')) {
+    FieldStorageConfig::create([
+      'field_name' => 'field_movie_price',
+      'entity_type' => 'node',
+      'type' => 'decimal',
+      'settings' => [
+        'precision' => 10,
+        'scale' => 2,
+      ],
+    ])->save();
+  }
+
+  FieldConfig::create([
+    'field_name' => 'field_movie_price',
+    'entity_type' => 'node',
+    'bundle' => 'movie',
+    'label' => 'Movie Price',
+    'required' => FALSE,
+  ])->save();
+
+  // Create Image field.
+  if (!FieldStorageConfig::loadByName('node', 'field_movie_image')) {
+    FieldStorageConfig::create([
+      'field_name' => 'field_movie_image',
+      'entity_type' => 'node',
+      'type' => 'image',
+      'settings' => [
+        'uri_scheme' => 'public',
+        'target_type' => 'file',
+      ],
+    ])->save();
+  }
+
+  FieldConfig::create([
+    'field_name' => 'field_movie_image',
+    'entity_type' => 'node',
+    'bundle' => 'movie',
+    'label' => 'Movie Poster',
+    'required' => FALSE,
+  ])->save();
+
+  // Set widget display for node form.
+  $form_display = EntityFormDisplay::load('node.movie.default');
+  if (!$form_display) {
+    $form_display = EntityFormDisplay::create([
+      'targetEntityType' => 'node',
+      'bundle' => 'movie',
+      'mode' => 'default',
+      'status' => TRUE,
+    ]);
+  }
+  $form_display->setComponent('field_movie_price', [
+    'type' => 'number',
+  ]);
+  $form_display->setComponent('field_movie_image', [
+    'type' => 'image_image',
+  ]);
+  $form_display->save();
+
+  // Set view display for nodes.
+  $view_display = EntityViewDisplay::load('node.movie.default');
+  if (!$view_display) {
+    $view_display = EntityViewDisplay::create([
+      'targetEntityType' => 'node',
+      'bundle' => 'movie',
+      'mode' => 'default',
+      'status' => TRUE,
+    ]);
+  }
+  $view_display->setComponent('field_movie_price', [
+    'type' => 'number_decimal',
+  ]);
+  $view_display->setComponent('field_movie_image', [
+    'type' => 'image',
+  ]);
+  $view_display->save();
+}

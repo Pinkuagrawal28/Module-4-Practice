@@ -1,0 +1,7 @@
+name: 'Award Winning Movies'
+type: module
+description: 'award-winning movies by year.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - config

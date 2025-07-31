@@ -1,0 +1,33 @@
+<?php
+
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function movie_budget_preprocess_node(array &$variables) {
+  $node = $variables['node'];
+
+  if ($node instanceof NodeInterface && $node->bundle() === 'movie') {
+    $config = \Drupal::config('movie_budget.settings');
+    $global_budget = $config->get('budget_limit');
+    $node_budget = $node->get('field_budget')->value;
+
+    if (is_numeric($node_budget) && is_numeric($global_budget)) {
+      if ($node_budget < $global_budget) {
+        $status = 'The movie is under budget';
+      }
+      elseif ($node_budget > $global_budget) {
+        $status = 'The movie is over budget';
+      }
+      else {
+        $status = 'The movie is within budget';
+      }
+
+      $variables['content']['budget_status'] = [
+        '#markup' => '<div class="budget-status">' . $status . '</div>',
+        '#weight' => -100, // Show it at the top.
+      ];
+    }
+  }
+}

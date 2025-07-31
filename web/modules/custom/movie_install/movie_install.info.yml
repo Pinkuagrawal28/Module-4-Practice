@@ -1,0 +1,10 @@
+name: Movie Install
+type: module
+description: 'Provides a Movie content type with custom fields.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - node
+  - text
+  - field
+  - image
